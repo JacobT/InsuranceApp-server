@@ -41,6 +41,7 @@ public static class DependencyInjectionExtensions
     {
         return services.AddScoped(typeof(IDetailService<,>), typeof(DetailService<,>))
                        .AddScoped(typeof(IRelatedEntityService<,,,>), typeof(RelatedEntityService<,,,>))
+                       .AddScoped(typeof(IFilterService<,>), typeof(FilterService<,>))
                        .AddScoped<ITokenService, TokenService>();
     }
 

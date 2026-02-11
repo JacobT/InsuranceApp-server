@@ -1,5 +1,4 @@
 ﻿using InsuranceApp.Api.Models;
-using InsuranceApp.Api.Services.Interfaces;
 using InsuranceApp.Data.Models;
 
 namespace InsuranceApp.Api.Managers.Interfaces;
@@ -10,6 +9,16 @@ namespace InsuranceApp.Api.Managers.Interfaces;
 /// </summary>
 public interface ICustomerManager : IBaseManager<Customer, CustomerDTO>
 {
+    /// <summary>
+    /// Retrieves a filtered list of <see cref="Customer"/> entities.
+    /// </summary>
+    /// <param name="search">String used for filtering <see cref="Customer"/> entries</param>
+    /// <returns>
+    /// A task that represents the asynchronous operation.  
+    /// The task result contains the a list of <see cref="Customer"/>.
+    /// </returns>
+    Task<IList<CustomerDTO>> GetAllAsync(string search);
+
     /// <summary>
     /// Retrieves detailed information about a single <see cref="Customer"/> entity.
     /// </summary>

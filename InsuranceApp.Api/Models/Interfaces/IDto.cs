@@ -1,4 +1,4 @@
-﻿namespace InsuranceApp.Api.Models;
+﻿namespace InsuranceApp.Api.Models.Interfaces;
 
 /// <summary>
 /// Defines a contract for all Data Transfer Objects (DTOs) in the application.

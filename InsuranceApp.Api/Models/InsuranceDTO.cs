@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using InsuranceApp.Api.Models.Interfaces;
+using System.ComponentModel.DataAnnotations;
 
 namespace InsuranceApp.Api.Models;
 

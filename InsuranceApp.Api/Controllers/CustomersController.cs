@@ -20,13 +20,18 @@ public class CustomersController : ControllerBase
 
     /// <summary>
     /// Retrieves all customers.
+    /// Optionally filtered by <paramref name="search"/>, if provided.
     /// </summary>
-    /// <returns>A list of <see cref="CustomerDTO"/> representing all customers.</returns>
+    /// <param name="search">String used for filtering <see cref="CustomerDTO"/> entries</param>
+    /// <returns>A list of filtered <see cref="CustomerDTO"/>.</returns>
     /// <response code="200">Returns the list of customers (empty if none found).</response>
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CustomerDTO>>> GetAll()
+    public async Task<ActionResult<IEnumerable<CustomerDTO>>> GetAll([FromQuery] string? search)
     {
-        IList<CustomerDTO> customerDTOs = await _customerManager.GetAllAsync();
+        IList<CustomerDTO> customerDTOs = string.IsNullOrEmpty(search)
+            ? await _customerManager.GetAllAsync()
+            : await _customerManager.GetAllAsync(search);
+
         return Ok(customerDTOs);
     }
 

@@ -1,12 +1,7 @@
-﻿using InsuranceApp.Data.Models;
+﻿using InsuranceApp.Data.Models.Interfaces;
 using InsuranceApp.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsuranceApp.Data.Repositories;
 

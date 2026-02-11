@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using InsuranceApp.Api.Managers.Interfaces;
-using InsuranceApp.Api.Models;
-using InsuranceApp.Data.Models;
+using InsuranceApp.Api.Models.Interfaces;
+using InsuranceApp.Data.Models.Interfaces;
 using InsuranceApp.Data.Repositories.Interfaces;
 
 namespace InsuranceApp.Api.Managers;

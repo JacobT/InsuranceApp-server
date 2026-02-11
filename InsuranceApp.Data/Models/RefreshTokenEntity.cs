@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using InsuranceApp.Data.Models.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace InsuranceApp.Data.Models;
 /// </summary>
 [Index(nameof(RefreshTokenHash), IsUnique = true)]
 [Index(nameof(UserId))]
-[Table("RefreshToken")]
+[Table("RefreshTokens")]
 public class RefreshTokenEntity : IEntity
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]

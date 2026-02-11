@@ -1,5 +1,4 @@
-﻿using Azure;
-using InsuranceApp.Api.Models;
+﻿using InsuranceApp.Api.Models;
 using InsuranceApp.Data.Models;
 
 namespace InsuranceApp.Api.Managers.Interfaces;

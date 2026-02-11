@@ -1,5 +1,5 @@
-﻿using InsuranceApp.Api.Models;
-using InsuranceApp.Data.Models;
+﻿using InsuranceApp.Api.Models.Interfaces;
+using InsuranceApp.Data.Models.Interfaces;
 
 namespace InsuranceApp.Api.Managers.Interfaces;
 

@@ -14,15 +14,27 @@ namespace InsuranceApp.Api.Managers;
 public class CustomerManager : BaseManager<Customer, CustomerDTO>, ICustomerManager
 {
     private readonly IDetailService<Customer, ICustomerRepository> _detailService;
+    private readonly IFilterService<Customer, ICustomerRepository> _filterService;
 
     public CustomerManager(
         ICustomerRepository repository,
         IMapper mapper,
-        IDetailService<Customer, ICustomerRepository> detailService)
+        IDetailService<Customer, ICustomerRepository> detailService,
+        IFilterService<Customer, ICustomerRepository> filterService)
         : base(repository, mapper)
     {
         _detailService = detailService;
+        _filterService = filterService;
     }
+
+    /// <inheritdoc />
+    /// <remarks>
+    /// This implementation retrieves a list of <see cref="Customer"/> entities 
+    /// using <see cref="IFilterService{TEntity, TRepository}"/>, 
+    /// and maps it to a list of <see cref="CustomerDTO"/>.
+    /// </remarks>
+    public async Task<IList<CustomerDTO>> GetAllAsync(string search) =>
+        _mapper.Map<IList<CustomerDTO>>(await _filterService.GetAllAsync(search));
 
     /// <inheritdoc />
     /// <remarks>

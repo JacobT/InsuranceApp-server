@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InsuranceApp.Data.Models;
+namespace InsuranceApp.Data.Models.Interfaces;
 
 /// <summary>
 /// Represents an entity with a primary key <see cref="Id"/> of type <see cref="int"/>.

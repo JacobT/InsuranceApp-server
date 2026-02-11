@@ -1,4 +1,4 @@
-﻿using InsuranceApp.Data.Models;
+﻿using InsuranceApp.Data.Models.Interfaces;
 using InsuranceApp.Data.Repositories.Interfaces;
 
 namespace InsuranceApp.Api.Services.Interfaces;

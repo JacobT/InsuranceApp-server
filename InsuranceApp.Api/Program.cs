@@ -2,6 +2,7 @@ using InsuranceApp.Api.Infrastructure;
 using InsuranceApp.Api.Infrastructure.Extensions;
 using InsuranceApp.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +22,11 @@ builder.Services.AddRepositories()
                 .AddServices();
 
 // Add controller support
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+});
 
 // Configure AutoMapper with mapping profiles
 builder.Services.AddAutoMapper(cfg => { cfg.AddProfile<MapperProfile>(); });
