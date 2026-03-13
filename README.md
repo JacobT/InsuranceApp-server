@@ -1,4 +1,4 @@
-# InsuranceApp — ASP.NET Core Web API
+# InsuranceApp - Server
 
 A learning project implementing a layered ASP.NET Core Web API for managing customers and insurance records. Designed to demonstrate practical knowledge of modern .NET development, clean architecture principles, and API best practices.
 
@@ -21,7 +21,7 @@ A learning project implementing a layered ASP.NET Core Web API for managing cust
 - Authorization attributes and policies
 - Async programming patterns
 
-## Project structure (backend)
+## Project structure
 - `InsuranceApp.Api` - API project (controllers, DTOs, program startup, business logic & mapping)
 - `InsuranceApp.Data` - data models, repositories
 
@@ -34,3 +34,4 @@ Implementing authentication and authorization (policy-based / JWT).
 Using AutoMapper and separating DTOs from domain models.
 Designing RESTful API with consistent endpoints.
  
+
